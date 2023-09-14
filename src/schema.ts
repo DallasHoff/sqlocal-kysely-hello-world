@@ -7,4 +7,5 @@ export type Database = {
 export type GroceriesTable = {
 	id: Generated<number>;
 	name: string;
+	quantity: Generated<number>;
 };

@@ -1,13 +1,7 @@
 import { db } from './db';
 
 async function main() {
-  // Prepare database table for demo
-  await db.schema
-    .createTable('groceries')
-    .ifNotExists()
-    .addColumn('id', 'integer', col => col.autoIncrement().primaryKey())
-    .addColumn('name', 'text', col => col.notNull())
-    .execute();
+  // Delete any previously added data
   await db.deleteFrom('groceries').execute();
   
   // Insert grocery items into the database
@@ -19,6 +13,7 @@ async function main() {
 
   // Fetch grocery items from the database
   const items = await db.selectFrom('groceries').selectAll().execute();
+  console.table(items);
 
   // Create elements
   const h1 = document.createElement('h1');

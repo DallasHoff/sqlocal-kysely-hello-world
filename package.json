@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   },
   "dependencies": {
-    "kysely": "^0.26.1",
-    "sqlocal": "^0.5.1"
+    "kysely": "^0.26.3",
+    "sqlocal": "^0.6.1"
   }
 }
